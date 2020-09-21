@@ -13,21 +13,20 @@
     </header>
     <div role="main">
         <p><%=content%></p>
-        <form action="/other" method="post">
-            <p>
-                <input type="text" name="message">
-                <input type="submit" value="送信">
-            </p>
-        </form>
         <table>
-            <% for(var key in data) { %>
             <tr>
-                <th><%= key %></th>
-                <td><%= data[key] %></td>
+                <th>伝言です!</th>
             </tr>
-            <% } %>
+            <tr>
+                <td><%= data.msg %></td>
+            </tr>
         </table>
-    </div>
+        <p>your last messsage: <%= cookie_data %></p>
+
+        <form action="/" method="post">
+            MESSAGE<input type="text" name="msg">
+            <input type="submit" value="送信">
+        </form>
 </body>
 
 </html>

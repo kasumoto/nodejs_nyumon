@@ -10,6 +10,10 @@
         <header><h1><%=title%></h1></header>
         <div role="main">
             <p><%=content%></p>
+
+            <% for(var key in data) { %>
+                <%- include('data_item', {key:key, val:data[key]}) %>
+            <% %>
         </div>
     </body>
 

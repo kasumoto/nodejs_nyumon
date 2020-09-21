@@ -1,0 +1,15 @@
+<!-- <tr>
+    <th><%= key %></th>
+    <td><%= data[key] %></td>
+</tr> -->
+
+    <table>
+        <tr>
+            <th><%= key %></th>
+            <% for(var i in val){ %>
+        <tr>
+            <td><%= val[i] %></td>
+        </tr>
+        <%}  %>
+        </tr>
+    </table>
