@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>ミニ掲示板</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script>
+        function init() {
+            var id = localStorage.getItem('id'); //ローカルストレージから値を取り出す
+            if (id == null) {
+                location.href = './login'; //値がなければログインページに移動
+            }
+            documtent.querySelector('#id').textContent = 'ID:' + id;
+            documtent.querySelector('#id_input').value = id;
+        }
+    </script>
+</head>
+
+<body ondload="init();">
+    <header>
+        <h1>掲示板</h1>
+    </header>
+    <div role="main">
+        <p>※メッセージは最大10個まで保管されます</p>
+        <form action="/" method="post">
+            <p><span id="id"></span>
+                <input type="hidden" id="id_input" name="id" value=""></p>
+            <p><input type="text" name="msg">
+                <input type="submit" value="送信"></p>
+        </form>
+        <hr>
+        <table>
+            <% for(var i in data) { %>
+            <%- include('data_item', {val:data[i]} %>
+            <% } %>
+        </table>
+    </div>
+</body>
+
+
+</html>
