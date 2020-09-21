@@ -14,3 +14,19 @@ p {
     font-size: 0.6em;
     margin: 0 20px;
 }
+
+table {
+    margin: 20px;
+}
+table tr th {
+    background-color: #999;
+    color: #fff;
+    text-align: center;
+    padding: 3px 10px;
+}
+teble tr td {
+    background-color: #eee;
+    color: #666;
+    text-align: left;
+    padding: 3px 10px;
+}
