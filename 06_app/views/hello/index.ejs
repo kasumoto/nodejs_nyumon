@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title><%= title %></title>
+    <script src="/javascripts/jquery.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+</head>
+
+<body>
+    <header>
+        <h1><%= title %></h1>
+    </header>
+    <div role="main">
+        <table>
+            <% for(var i in content) { %>
+            <tr>
+                <% var obj = content[i].attributes; %>
+                <th><%= obj.id %> </th>
+                <th><%= obj.name %> </th>
+                <th><%= obj.mail %> </th>
+                <th><%= obj.age %> </th>
+            </tr>
+            <% } %>
+        </table>
+
+        <div>
+            <span><a href="/hello/1">&lt;&lt; First</a></span>
+            <span><a href="/hello/<%= pagination.page -1 %> ">&lt;&lt; prev</a></span>
+            <span><a href="/hello/<%= pagination.page +1 %> ">Next &lt;&lt;</a></span>
+            <span><a href="/hello/<%= pagination.pageCount %> ">Last &lt;&lt;</a></span>
+        </div>
+    </div>
+</body>
+
+</html>
