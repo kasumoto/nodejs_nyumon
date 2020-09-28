@@ -1,0 +1,46 @@
+body {
+  font-size: 16px;
+  color: #999;
+  margin:0;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #999;
+  text-align: right;
+  margin: 0;
+}
+h2{
+  font-size: 2rem;
+}
+p {
+  margin: 0;
+}
+
+table {
+  margin: 20px;
+}
+table tr th {
+  background-color: #999;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 10px;
+}
+table tr td {
+  background-color: #eee;
+  color: #666;
+  text-align: left;
+  padding: 5px 10px;
+}
+.error {
+  color: red;
+}
+
+a {
+  color: #00B7FF;
+}
+a.home {
+  color: #ffffff;
+  text-decoration: none;
+}
+
