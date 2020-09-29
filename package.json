@@ -16,7 +16,13 @@
   },
   "homepage": "https://github.com/kasumoto/nodejs_nyumon#readme",
   "dependencies": {
-    "ejs": "^3.1.5"
+    "bookshelf": "^1.2.0",
+    "ejs": "^3.1.5",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.1",
+    "knex": "^0.21.6",
+    "markdown": "^0.5.0",
+    "sqlite3": "^5.0.0"
   },
   "devDependencies": {},
   "description": ""
